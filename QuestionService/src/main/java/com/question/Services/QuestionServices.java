@@ -16,5 +16,15 @@ public interface QuestionServices {
 	
 	//getByIdu
 	Question getQuestionById(Integer questionId);
+	
+	// getAllQuationbyQuizId 
+	
+	List<Question> getQuestionByQuizId(Integer quizId);
+		
+		
+		
+		
+		
+	
 
 }

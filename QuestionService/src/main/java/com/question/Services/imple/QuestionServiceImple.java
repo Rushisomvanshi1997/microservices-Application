@@ -33,4 +33,10 @@ public class QuestionServiceImple  implements QuestionServices{
 		return  this.questionRepo.findById(questionId).orElseThrow(()-> new RuntimeException(" Question not Found.!!"));
 	}
 
+	@Override
+	public List<Question> getQuestionByQuizId(Integer quizId) {
+	
+		return   this.questionRepo.findByquizId(quizId);
+	}
+
 }

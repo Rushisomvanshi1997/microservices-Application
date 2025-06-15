@@ -1,5 +1,7 @@
 package com.question.repo;
 
+import java.util.List;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -9,4 +11,6 @@ import com.question.entities.Question;
 public interface QuestionRepo  extends JpaRepository<Question, Integer>{
 	
 
+	
+	List<Question>  findByquizId(Integer quizId);
 }

@@ -40,12 +40,19 @@ public class QuestionController {
 	
 	// get question by id
 	
-	@GetMapping("/{questionId}")
+	@GetMapping("/questionId/{questionId}")
 	public ResponseEntity<Question> getQuestionById(@PathVariable Integer questionId){
 		
 		return ResponseEntity.ok(this.questionServices.getQuestionById(questionId));
 	}
 	
+	
+	@GetMapping("/quizId/{quizId}")
+	public ResponseEntity< List<Question>> getQuestionByQuizId(@PathVariable Integer quizId){
+		
+	return ResponseEntity.ok(this.questionServices.getQuestionByQuizId(quizId));
+		
+	}
 	
 	
 	
