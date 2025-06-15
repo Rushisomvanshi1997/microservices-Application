@@ -1,0 +1,12 @@
+package com.question.repo;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.question.entities.Question;
+
+@Repository
+public interface QuestionRepo  extends JpaRepository<Question, Integer>{
+	
+
+}
