@@ -26,7 +26,7 @@ public class QuizServiceImple implements QuizServices {
 
 	@Override
 	public Quiz getById(Integer id) {
-		// TODO Auto
+	
 		return this.quizRepository.findById(id)
 				.orElseThrow(()-> new RuntimeException("Quiz not found.!!"));
 	}
