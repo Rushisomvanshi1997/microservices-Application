@@ -8,13 +8,12 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import com.quiz.entities.Question;
 
-@FeignClient(url="http://localhost:9092", value="Question-Client")
+//@FeignClient(url="http://localhost:9092", value="Question-Client")
+//add lodebalace dependency 
+@FeignClient(name="QUESTION-SERVICES")
 public interface QuestionClient {
-	
 	
 	@GetMapping("/api/question/quizId/{quizId}")
 	List<Question>  getQuestionOFQuiz(@PathVariable Integer quizId);
-	
-	
 	
 }
